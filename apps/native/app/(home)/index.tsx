@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native";
-
 import { Link } from "expo-router";
+import { StyleSheet } from "react-native";
+import { Button } from "ui";
 import { View } from "../../components/Themed";
 
 export default function TabOneScreen() {
@@ -9,6 +9,13 @@ export default function TabOneScreen() {
       <Link href="/results/0/1/2" style={styles.title}>
         IR A RESULTADOS
       </Link>
+      <Button
+        onClick={() => {
+          console.log("Pressed!");
+          alert("Pressed!");
+        }}
+        text="Boop"
+      />
     </View>
   );
 }
